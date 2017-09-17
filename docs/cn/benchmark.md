@@ -113,7 +113,7 @@ server一样的[内置服务](builtin_service.md)。
 
 本测试运行在[单机1](#环境)上。
 
-（X轴是线程数，Y轴是对应的QPS）
+（X轴是线程数，Y轴是对应的QPS）   
 
 ![img](../images/qps_vs_threadnum.png)
 
@@ -195,7 +195,7 @@ grpc，hulu-pbrpc，sofa-pbrpc: 几乎重合，256个线程时相比1个线程�
 本测试运行在[多机2](#环境)上。14台每台运行4个client，多线程同步访问8台server，这些server还会同步访问另外8台server。负载均衡算法为round-robin或RPC默认提供的。由于grpc访问多server较麻烦且有很大概率仍表现不佳，这个测试不包含grpc。
 
 本测试中有1%的长尾请求耗时10毫秒，长尾请求的延时不计入结果，因为我们考察的是普通请求是否被及时处理了。
-
+嗯嗯
 （X轴是延时（微秒），Y轴是小于X轴延时的请求比例）
 
 ![img](../images/twolevel_server_latency_cdf.png)
